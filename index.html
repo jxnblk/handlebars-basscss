@@ -23,6 +23,7 @@
     </div>
   <div class="Panel-body p2">
             <h2>Panel with header but no footer</h2>
+        <p>Cool stuff bruh</p>
 
   </div>
 </div>
@@ -30,6 +31,21 @@
     <div class="col-6 px2">
 <div class="Panel overflow-hidden mb3 bg-white border rounded "
 >
+  <div class="Panel-body p2">
+            Panel with footer but no header
+
+  </div>
+    <div class="Panel-footer p2 bg-lighter-gray border-top">
+      <p class="m0 h5">Panel Footer</p>
+    </div>
+</div>
+    </div>
+    <div class="col-6 px2">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
+    <div class="Panel-header p2 bg-lighter-gray border-bottom">
+      <h1 class="h3 m0">Panel Header</h1>
+    </div>
   <div class="Panel-body p2">
             Panel with footer but no header
 
@@ -294,10 +310,94 @@
 
 <section id="media-object" class="py3">
   <h1>Media Object</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 px2">
+<div class="Media clearfix mb3 "
+>
+    <img src="//basscss.com/docs/placeholder.svg"
+      width="128"
+      height=""
+      class="Media-img left mr2"/>
+  <div class="Media-body overflow-hidden">
+            <h2 class="m0">Media Object</h2>
+        <p class="m0">With variable body content</p>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 px2">
+<div class="Media clearfix mb3 "
+>
+    <img src="//basscss.com/docs/placeholder.svg"
+      width="128"
+      height=""
+      class="Media-img-right right ml2"/>
+  <div class="Media-body overflow-hidden">
+            <h2 class="m0">Media Object</h2>
+        <p class="m0">With image to the right</p>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 px2">
+<div class="Media clearfix mb3 "
+>
+    <img src="//basscss.com/docs/placeholder.svg"
+      width="128"
+      height=""
+      class="Media-img left mr2"/>
+    <img src="//basscss.com/docs/placeholder.svg"
+      width="128"
+      height=""
+      class="Media-img-right right ml2"/>
+  <div class="Media-body overflow-hidden">
+            <h2 class="m0">Media Object</h2>
+        <p class="m0">With two images</p>
+
+  </div>
+</div>
+    </div>
+  </div>
 </section>
 
 <section id="flag-object" class="py3">
   <h1>Flag Object</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 px2">
+
+<div class="Flag table mb3 "
+>
+    <div class="Flag-img table-cell">
+      <img src="//placehold.it/128"
+        width="128"
+        height="128"
+        class="" />
+    </div>
+  <div class="Flag-body table-cell full-width">
+            <h2 class="m0">Flag Object</h2>
+        <p class="m0">Vertically centered media object</p>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 px2">
+
+<div class="Flag table mb3 "
+>
+    <div class="Flag-img table-cell">
+      <img src="//basscss.com/docs/placeholder.svg"
+        width="128"
+        height="128"
+        class="" />
+    </div>
+  <div class="Flag-body table-cell full-width">
+            <h2 class="m0">Flag Object</h2>
+        <p class="m0">Vertically centered media object</p>
+
+  </div>
+</div>
+    </div>
+  </div>
 </section>
 
 <section id="badge" class="py3">
@@ -323,6 +423,7 @@
 <section id="dropdown" class="py3">
   <h1 class="mb0">Dropdown</h1>
   <p class="h5">(Requires Javascript)</p>
+
 <div class="Dropdown inline-block relative mr1 mb2"
     id="dropdown-1"
   >
@@ -333,7 +434,8 @@
   </button>
   <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
   <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
-        <a 
+        <a href="#" class="button block button-nav-light">Item</a>
+    <a 
     href="#dropdown"
   class="NavItem button block button-nav-light ">
     Action
@@ -355,6 +457,7 @@
   </div>
 
 </div>
+
 <div class="Dropdown inline-block relative mr1 mb2"
     id="dropdown-2"
   >
@@ -387,6 +490,7 @@
   </div>
 
 </div>
+
 </section>
 
 <section id="modal" class="py3">

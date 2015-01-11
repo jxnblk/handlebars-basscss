@@ -6,4 +6,6 @@ module.exports = {
   navItem: require('./components/nav-item'),
   nav: require('./components/nav'),
   dropdown: require('./components/dropdown'),
+  media: require('./components/media'),
+  flag: require('./components/flag'),
 };

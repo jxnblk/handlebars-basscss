@@ -11,10 +11,16 @@
     <div class="col-6 px2">
       {{#panel header="Panel Header" }}
         <h2>Panel with header but no footer</h2>
+        <p>Cool stuff bruh</p>
       {{/panel}}
     </div>
     <div class="col-6 px2">
       {{#panel footer="Panel Footer" }}
+        Panel with footer but no header
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel header="Panel Header" footer="Panel Footer" }}
         Panel with footer but no header
       {{/panel}}
     </div>
@@ -132,10 +138,51 @@
 
 <section id="media-object" class="py3">
   <h1>Media Object</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 px2">
+      {{#media img="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+        <h2 class="m0">Media Object</h2>
+        <p class="m0">With variable body content</p>
+      {{/media }}
+    </div>
+    <div class="col-6 px2">
+      {{#media imgRight="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+        <h2 class="m0">Media Object</h2>
+        <p class="m0">With image to the right</p>
+      {{/media }}
+    </div>
+    <div class="col-6 px2">
+      {{#media
+        img="//basscss.com/docs/placeholder.svg"
+        imgRight="//basscss.com/docs/placeholder.svg"
+        imgWidth="128" }}
+        <h2 class="m0">Media Object</h2>
+        <p class="m0">With two images</p>
+      {{/media }}
+    </div>
+  </div>
 </section>
 
 <section id="flag-object" class="py3">
   <h1>Flag Object</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 px2">
+      {{#flag img="//placehold.it/128"
+        imgWidth="128"
+        imgHeight="128"}}
+        <h2 class="m0">Flag Object</h2>
+        <p class="m0">Vertically centered media object</p>
+      {{/flag}}
+    </div>
+    <div class="col-6 px2">
+      {{#flag img="//basscss.com/docs/placeholder.svg"
+        imgWidth="128"
+        imgHeight="128"}}
+        <h2 class="m0">Flag Object</h2>
+        <p class="m0">Vertically centered media object</p>
+      {{/flag}}
+    </div>
+  </div>
 </section>
 
 <section id="badge" class="py3">
@@ -161,16 +208,20 @@
 <section id="dropdown" class="py3">
   <h1 class="mb0">Dropdown</h1>
   <p class="h5">(Requires Javascript)</p>
+
   {{#dropdown "Actions" id="dropdown-1" class="mr1 mb2" }}
+    <a href="#" class="button block button-nav-light">Item</a>
     {{navItem "Action" href="#dropdown"}}
     {{navItem "Edit" href="#dropdown"}}
     {{navItem "Remove" href="#dropdown"}}
   {{/dropdown}}
+
   {{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
     {{navItem "Action" href="#dropdown"}}
     {{navItem "Action" href="#dropdown"}}
     {{navItem "Action" href="#dropdown"}}
   {{/dropdown}}
+
 </section>
 
 <section id="modal" class="py3">

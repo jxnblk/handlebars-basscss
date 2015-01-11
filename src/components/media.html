@@ -1,0 +1,20 @@
+<div class="Media clearfix mb3 {{ this.classlist }}"
+  {{#each attr}}
+    {{ this.key }}="{{ this.value }}"
+  {{/each}}>
+  {{#if this.img }}
+    <img src="{{ this.img }}"
+      width="{{ this.imgWidth }}"
+      height="{{ this.imgHeight }}"
+      class="Media-img left mr2"/>
+  {{/if}}
+  {{#if this.imgRight }}
+    <img src="{{ this.imgRight }}"
+      width="{{ this.imgWidth }}"
+      height="{{ this.imgHeight }}"
+      class="Media-img-right right ml2"/>
+  {{/if}}
+  <div class="Media-body overflow-hidden">
+    {{{ this.body }}}
+  </div>
+</div>

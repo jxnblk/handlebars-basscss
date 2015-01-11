@@ -1,0 +1,17 @@
+
+<div class="Flag table mb3 {{ this.classlist }}"
+  {{#each attr}}
+    {{ this.key }}="{{ this.value }}"
+  {{/each}}>
+  {{#if this.img }}
+    <div class="Flag-img table-cell">
+      <img src="{{ this.img }}"
+        width="{{ this.imgWidth }}"
+        height="{{ this.imgHeight }}"
+        class="" />
+    </div>
+  {{/if}}
+  <div class="Flag-body table-cell full-width">
+    {{{ this.body }}}
+  </div>
+</div>
