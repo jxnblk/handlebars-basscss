@@ -1,0 +1,6 @@
+<a {{#each this.attr }}
+    {{ this.key }}="{{ this.value }}"
+  {{/each}}
+  class="NavItem button block button-nav-light {{ this.classlist }}">
+    {{{ this.body }}}
+</a>

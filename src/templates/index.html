@@ -1,0 +1,115 @@
+{{>head}}
+
+<header class="py3">
+  <h1 class="m0">Handlebars Basscss</h1>
+  <p class="m0">Helpers for creating UI elements in Handlebars with Basscss</p>
+</header>
+
+<section id="panel" class="py3">
+  <h1>Panel</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 px2">
+      {{#panel header="Panel Header" }}
+        <h2>Panel with header but no footer</h2>
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel footer="Panel Footer" }}
+        Panel with footer but no header
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel header="Info Panel Header" type="info" }}
+        Panel with header and footer
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel header="Error Panel Header" type="error" }}
+        Panel with header and footer
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel }}
+        Basic panel with no header or footer
+      {{/panel}}
+    </div>
+  </div>
+</section>
+
+<section id="message" class="py3">
+  {{#message}}
+    Default flash message
+  {{/message}}
+  {{#message type="info" }}
+    Info flash message
+  {{/message}}
+  {{#message type="success" }}
+    Success flash message
+  {{/message}}
+  {{#message type="warning" }}
+    Warning flash message
+  {{/message}}
+  {{#message type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}
+    Error flash message
+  {{/message}}
+</section>
+
+<section id="nav-item" class="py3">
+  <h1>Nav Item</h1>
+  {{navItem "Nav link" href="#nav-item" }}
+  {{navItem "Nav link" href="#derp" id="nav-link-test" }}
+</section>
+
+<section id="nav" class="py3">
+  <h1>Nav</h1>
+  {{#nav id="nav" direction="horizontal" }}
+    {{navItem "Nav link" href="#nav-item" }}
+    {{navItem "Nav link" href="#derp" id="nav-link-test" }}
+  {{/nav}}
+</section>
+
+<section id="tabs" class="py3">
+  <h1>Tabs</h1>
+</section>
+
+<section id="navbar" class="py3">
+  <h1>Navbar</h1>
+</section>
+
+<section id="card" class="py3">
+  <h1>Card</h1>
+</section>
+
+<section id="media-object" class="py3">
+  <h1>Media Object</h1>
+</section>
+
+<section id="flag-object" class="py3">
+  <h1>Flag Object</h1>
+</section>
+
+<section id="badge" class="py3">
+  <h1>Badge</h1>
+</section>
+
+<section id="button" class="py3">
+  <h1>Button</h1>
+</section>
+
+<section id="button-group" class="py3">
+  <h1>Button Group</h1>
+</section>
+
+<section id="pagination" class="py3">
+  <h1>Pagination</h1>
+</section>
+
+<section id="breadcrumbs" class="py3">
+  <h1>Breadcrumbs</h1>
+</section>
+
+<section id="modal" class="py3">
+  <h1>Modal</h1>
+</section>
+
+{{>footer}}
