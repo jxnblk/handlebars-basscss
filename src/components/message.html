@@ -1,4 +1,7 @@
-<div class="Message table bold mb2 rounded {{ this.classlist }}">
+<div class="Message table bold mb2 rounded {{ this.classlist }} {{ this.stateClass }}"
+  {{#each attr}}
+    {{ this.key }}="{{ this.value }}"
+  {{/each}}>
   <div class="Message-body p2 table-cell full-width">
     {{{ this.body }}}
   </div>

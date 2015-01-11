@@ -1,18 +1,17 @@
 
 var fs = require('fs');
 var Handlebars = require('handlebars');
-var getAttr = require('./util/get-attributes');
+var util = require('./util');
 
 module.exports = function(context, options) {
 
   var options = options || {};
-  var data = {};
+  var data = util.defaults(options);
 
   data.body = context;
 
   if (options.hash) {
-    data.attr = getAttr(options.hash);
-    data.classlist = options.hash.class || null;
+    data.inline = options.hash.inline || false;
   }
 
   var template = Handlebars.compile(fs.readFileSync(__dirname + '/nav-item.html', 'utf8'));

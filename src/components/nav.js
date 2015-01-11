@@ -1,18 +1,14 @@
 
 var fs = require('fs');
 var Handlebars = require('handlebars');
-var getAttr = require('./util/get-attributes');
+var util = require('./util');
 
 module.exports = function(options) {
 
   var options = options || {};
-  var data = {};
-
-  data.body = options.fn(this);
+  var data = util.defaults(options);
 
   if (options.hash) {
-    data.attr = getAttr(options.hash);
-    data.classlist = options.hash.class || null;
     data.horizontal = options.hash.direction == 'horizontal' || false;
   }
 

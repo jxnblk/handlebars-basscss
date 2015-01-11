@@ -9,13 +9,13 @@ module.exports = function(options) {
   var data = util.defaults(options);
 
   if (options.hash) {
-    data.dismiss = options.hash.dismiss || null;
-    data.stateClass = util.getStateClasses(options.hash.type) || 'bg-light-gray';
+    data.img = options.hash.img || null;
+    data.cardClass = util.getStateClasses(options.hash.type) || 'bg-white border';
   } else {
-    data.stateClass = 'bg-light-gray';
+    data.cardClass = 'bg-white border';
   }
 
-  var template = Handlebars.compile(fs.readFileSync(__dirname + '/message.html', 'utf8'));
+  var template = Handlebars.compile(fs.readFileSync(__dirname + '/card.html', 'utf8'));
   var html = template(data);
 
   return new Handlebars.SafeString(html);

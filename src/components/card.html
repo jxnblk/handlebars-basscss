@@ -1,0 +1,11 @@
+<div class="Card mb3 overflow-hidden rounded {{ cardClass }}"
+  {{#each attr}}
+    {{ this.key }}="{{ this.value }}"
+  {{/each}}>
+  {{#if img }}
+    <img src="{{ img }}" />
+  {{/if}}
+  <div class="p2">
+    {{{ body }}}
+  </div>
+</div>

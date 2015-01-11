@@ -20,18 +20,64 @@
     </div>
     <div class="col-6 px2">
       {{#panel header="Info Panel Header" type="info" }}
-        Panel with header and footer
+        Panel with header
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel header="Success Panel Header" type="success" }}
+        Panel with header
+      {{/panel}}
+    </div>
+    <div class="col-6 px2">
+      {{#panel header="Warning Panel Header" type="warning" }}
+        Panel with header
       {{/panel}}
     </div>
     <div class="col-6 px2">
       {{#panel header="Error Panel Header" type="error" }}
-        Panel with header and footer
+        Panel with header
       {{/panel}}
     </div>
     <div class="col-6 px2">
       {{#panel }}
         Basic panel with no header or footer
       {{/panel}}
+    </div>
+  </div>
+</section>
+
+<section id="card" class="py3">
+  <h1>Card</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 md-col-4 lg-col-3 px2">
+      {{#card }}
+        <h1>Default Card</h1>
+      {{/card}}
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+      {{#card type="info"}}
+        <h1>Info Card</h1>
+      {{/card}}
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+      {{#card type="success"}}
+        <h1>Success Card</h1>
+      {{/card}}
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+      {{#card type="warning"}}
+        <h1>Warning Card</h1>
+      {{/card}}
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+      {{#card type="error"}}
+        <h1>Error Card</h1>
+      {{/card}}
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+      {{#card img="//basscss.com/docs/placeholder.svg"}}
+        <h1>Image Card</h1>
+      {{/card}}
     </div>
   </div>
 </section>
@@ -58,13 +104,21 @@
   <h1>Nav Item</h1>
   {{navItem "Nav link" href="#nav-item" }}
   {{navItem "Nav link" href="#derp" id="nav-link-test" }}
+  {{navItem "Inline Nav link" inline="true" href="#derp" id="nav-link-test" }}
+  {{navItem "Inline Nav link" inline="true" href="#derp" id="nav-link-test" }}
 </section>
 
 <section id="nav" class="py3">
   <h1>Nav</h1>
-  {{#nav id="nav" direction="horizontal" }}
+  {{#nav id="nav" class="mb3" }}
     {{navItem "Nav link" href="#nav-item" }}
-    {{navItem "Nav link" href="#derp" id="nav-link-test" }}
+    {{navItem "Nav link" href="#nav-item" }}
+    {{navItem "Nav link" href="#nav-item" }}
+  {{/nav}}
+  {{#nav id="nav" class="inline-block" }}
+    {{navItem "Nav link" href="#nav-item" inline="true" }}
+    {{navItem "Nav link" href="#nav-item" inline="true" }}
+    {{navItem "Nav link" href="#nav-item" inline="true" }}
   {{/nav}}
 </section>
 
@@ -74,10 +128,6 @@
 
 <section id="navbar" class="py3">
   <h1>Navbar</h1>
-</section>
-
-<section id="card" class="py3">
-  <h1>Card</h1>
 </section>
 
 <section id="media-object" class="py3">

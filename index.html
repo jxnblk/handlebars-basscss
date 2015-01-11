@@ -16,8 +16,9 @@
   <h1>Panel</h1>
   <div class="flex flex-wrap mxn2">
     <div class="col-6 px2">
-<div class="Panel overflow-hidden mb3 bg-white border rounded ">
-    <div class="Panel-header p2 border-bottom bg-lighter-gray">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
+    <div class="Panel-header p2 bg-lighter-gray border-bottom">
       <h1 class="h3 m0">Panel Header</h1>
     </div>
   <div class="Panel-body p2">
@@ -27,7 +28,8 @@
 </div>
     </div>
     <div class="col-6 px2">
-<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
   <div class="Panel-body p2">
             Panel with footer but no header
 
@@ -38,29 +40,56 @@
 </div>
     </div>
     <div class="col-6 px2">
-<div class="Panel overflow-hidden mb3 bg-white border rounded ">
-    <div class="Panel-header p2 border-bottom white bg-blue">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
+    <div class="Panel-header p2 white bg-blue">
       <h1 class="h3 m0">Info Panel Header</h1>
     </div>
   <div class="Panel-body p2">
-            Panel with header and footer
+            Panel with header
 
   </div>
 </div>
     </div>
     <div class="col-6 px2">
-<div class="Panel overflow-hidden mb3 bg-white border rounded ">
-    <div class="Panel-header p2 border-bottom white bg-red">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
+    <div class="Panel-header p2 white bg-green">
+      <h1 class="h3 m0">Success Panel Header</h1>
+    </div>
+  <div class="Panel-body p2">
+            Panel with header
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 px2">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
+    <div class="Panel-header p2 bg-yellow">
+      <h1 class="h3 m0">Warning Panel Header</h1>
+    </div>
+  <div class="Panel-body p2">
+            Panel with header
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 px2">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
+    <div class="Panel-header p2 white bg-red">
       <h1 class="h3 m0">Error Panel Header</h1>
     </div>
   <div class="Panel-body p2">
-            Panel with header and footer
+            Panel with header
 
   </div>
 </div>
     </div>
     <div class="col-6 px2">
-<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+<div class="Panel overflow-hidden mb3 bg-white border rounded "
+>
   <div class="Panel-body p2">
             Basic panel with no header or footer
 
@@ -70,32 +99,98 @@
   </div>
 </section>
 
+<section id="card" class="py3">
+  <h1>Card</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 md-col-4 lg-col-3 px2">
+<div class="Card mb3 overflow-hidden rounded bg-white border"
+>
+  <div class="p2">
+            <h1>Default Card</h1>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+<div class="Card mb3 overflow-hidden rounded white bg-blue"
+>
+  <div class="p2">
+            <h1>Info Card</h1>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+<div class="Card mb3 overflow-hidden rounded white bg-green"
+>
+  <div class="p2">
+            <h1>Success Card</h1>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+<div class="Card mb3 overflow-hidden rounded bg-yellow"
+>
+  <div class="p2">
+            <h1>Warning Card</h1>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+<div class="Card mb3 overflow-hidden rounded white bg-red"
+>
+  <div class="p2">
+            <h1>Error Card</h1>
+
+  </div>
+</div>
+    </div>
+    <div class="col-6 md-col-4 lg-col-3 px2">
+<div class="Card mb3 overflow-hidden rounded bg-white border"
+>
+    <img src="//basscss.com/docs/placeholder.svg" />
+  <div class="p2">
+            <h1>Image Card</h1>
+
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
 <section id="message" class="py3">
-<div class="Message table bold mb2 rounded bg-light-gray">
+<div class="Message table bold mb2 rounded  bg-light-gray"
+>
   <div class="Message-body p2 table-cell full-width">
         Default flash message
 
   </div>
 </div>
-<div class="Message table bold mb2 rounded white bg-blue">
+<div class="Message table bold mb2 rounded  white bg-blue"
+>
   <div class="Message-body p2 table-cell full-width">
         Info flash message
 
   </div>
 </div>
-<div class="Message table bold mb2 rounded white bg-green">
+<div class="Message table bold mb2 rounded  white bg-green"
+>
   <div class="Message-body p2 table-cell full-width">
         Success flash message
 
   </div>
 </div>
-<div class="Message table bold mb2 rounded bg-yellow">
+<div class="Message table bold mb2 rounded  bg-yellow"
+>
   <div class="Message-body p2 table-cell full-width">
         Warning flash message
 
   </div>
 </div>
-<div class="Message table bold mb2 rounded white bg-red">
+<div class="Message table bold mb2 rounded  white bg-red"
+>
   <div class="Message-body p2 table-cell full-width">
         Error flash message
 
@@ -121,11 +216,29 @@
     Nav link
 </a>
 
+  <a 
+    id="nav-link-test"
+
+    href="#derp"
+  class="NavItem button  button-nav-light ">
+    Inline Nav link
+</a>
+
+  <a 
+    id="nav-link-test"
+
+    href="#derp"
+  class="NavItem button  button-nav-light ">
+    Inline Nav link
+</a>
+
 </section>
 
 <section id="nav" class="py3">
   <h1>Nav</h1>
-<div class="Nav bg-white border rounded ">
+<div class="Nav bg-white border rounded mb3"
+    id="nav"
+  >
       <a 
     href="#nav-item"
   class="NavItem button block button-nav-light ">
@@ -133,10 +246,37 @@
 </a>
 
     <a 
-    id="nav-link-test"
-
-    href="#derp"
+    href="#nav-item"
   class="NavItem button block button-nav-light ">
+    Nav link
+</a>
+
+    <a 
+    href="#nav-item"
+  class="NavItem button block button-nav-light ">
+    Nav link
+</a>
+
+
+</div>
+<div class="Nav bg-white border rounded inline-block"
+    id="nav"
+  >
+      <a 
+    href="#nav-item"
+  class="NavItem button  button-nav-light ">
+    Nav link
+</a>
+
+    <a 
+    href="#nav-item"
+  class="NavItem button  button-nav-light ">
+    Nav link
+</a>
+
+    <a 
+    href="#nav-item"
+  class="NavItem button  button-nav-light ">
     Nav link
 </a>
 
@@ -150,10 +290,6 @@
 
 <section id="navbar" class="py3">
   <h1>Navbar</h1>
-</section>
-
-<section id="card" class="py3">
-  <h1>Card</h1>
 </section>
 
 <section id="media-object" class="py3">
