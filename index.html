@@ -16,52 +16,52 @@
   <h1>Panel</h1>
   <div class="flex flex-wrap mxn2">
     <div class="col-6 px2">
-<div class="overflow-hidden mb3 bg-white border rounded ">
-    <div class="p2 border-bottom bg-lighter-gray">
+<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+    <div class="Panel-header p2 border-bottom bg-lighter-gray">
       <h1 class="h3 m0">Panel Header</h1>
     </div>
-  <div class="p2">
+  <div class="Panel-body p2">
             <h2>Panel with header but no footer</h2>
 
   </div>
 </div>
     </div>
     <div class="col-6 px2">
-<div class="overflow-hidden mb3 bg-white border rounded ">
-  <div class="p2">
+<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+  <div class="Panel-body p2">
             Panel with footer but no header
 
   </div>
-    <div class="p2 bg-lighter-gray border-top">
+    <div class="Panel-footer p2 bg-lighter-gray border-top">
       <p class="m0 h5">Panel Footer</p>
     </div>
 </div>
     </div>
     <div class="col-6 px2">
-<div class="overflow-hidden mb3 bg-white border rounded ">
-    <div class="p2 border-bottom white bg-blue">
+<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+    <div class="Panel-header p2 border-bottom white bg-blue">
       <h1 class="h3 m0">Info Panel Header</h1>
     </div>
-  <div class="p2">
+  <div class="Panel-body p2">
             Panel with header and footer
 
   </div>
 </div>
     </div>
     <div class="col-6 px2">
-<div class="overflow-hidden mb3 bg-white border rounded ">
-    <div class="p2 border-bottom white bg-red">
+<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+    <div class="Panel-header p2 border-bottom white bg-red">
       <h1 class="h3 m0">Error Panel Header</h1>
     </div>
-  <div class="p2">
+  <div class="Panel-body p2">
             Panel with header and footer
 
   </div>
 </div>
     </div>
     <div class="col-6 px2">
-<div class="overflow-hidden mb3 bg-white border rounded ">
-  <div class="p2">
+<div class="Panel overflow-hidden mb3 bg-white border rounded ">
+  <div class="Panel-body p2">
             Basic panel with no header or footer
 
   </div>
@@ -71,36 +71,36 @@
 </section>
 
 <section id="message" class="py3">
-<div class="table bold mb2 rounded bg-light-gray">
-  <div class="p2 table-cell full-width">
+<div class="Message table bold mb2 rounded bg-light-gray">
+  <div class="Message-body p2 table-cell full-width">
         Default flash message
 
   </div>
 </div>
-<div class="table bold mb2 rounded white bg-blue">
-  <div class="p2 table-cell full-width">
+<div class="Message table bold mb2 rounded white bg-blue">
+  <div class="Message-body p2 table-cell full-width">
         Info flash message
 
   </div>
 </div>
-<div class="table bold mb2 rounded white bg-green">
-  <div class="p2 table-cell full-width">
+<div class="Message table bold mb2 rounded white bg-green">
+  <div class="Message-body p2 table-cell full-width">
         Success flash message
 
   </div>
 </div>
-<div class="table bold mb2 rounded bg-yellow">
-  <div class="p2 table-cell full-width">
+<div class="Message table bold mb2 rounded bg-yellow">
+  <div class="Message-body p2 table-cell full-width">
         Warning flash message
 
   </div>
 </div>
-<div class="table bold mb2 rounded white bg-red">
-  <div class="p2 table-cell full-width">
+<div class="Message table bold mb2 rounded white bg-red">
+  <div class="Message-body p2 table-cell full-width">
         Error flash message
 
   </div>
-    <a class="h3 table-cell button py2 button-nav-dark"
+    <a class="Message-dismiss h3 table-cell button py2 button-nav-dark"
       onclick="console.log('bye bye');this.parentNode.remove()">&times;</a>
 </div>
 </section>
@@ -125,7 +125,7 @@
 
 <section id="nav" class="py3">
   <h1>Nav</h1>
-<div class="bg-white border rounded ">
+<div class="Nav bg-white border rounded ">
       <a 
     href="#nav-item"
   class="NavItem button block button-nav-light ">
@@ -184,9 +184,102 @@
   <h1>Breadcrumbs</h1>
 </section>
 
+<section id="dropdown" class="py3">
+  <h1 class="mb0">Dropdown</h1>
+  <p class="h5">(Requires Javascript)</p>
+<div class="Dropdown inline-block relative mr1 mb2"
+    id="dropdown-1"
+  >
+  <button class="Dropdown-button button-light-gray"
+    onclick="">
+    Actions
+    &#9662;
+  </button>
+  <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
+  <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
+        <a 
+    href="#dropdown"
+  class="NavItem button block button-nav-light ">
+    Action
+</a>
+
+    <a 
+    href="#dropdown"
+  class="NavItem button block button-nav-light ">
+    Edit
+</a>
+
+    <a 
+    href="#dropdown"
+  class="NavItem button block button-nav-light ">
+    Remove
+</a>
+
+
+  </div>
+
+</div>
+<div class="Dropdown inline-block relative mr1 mb2"
+    id="dropdown-2"
+  >
+  <button class="Dropdown-button button-blue"
+    onclick="">
+    More Actions
+    &#9662;
+  </button>
+  <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
+  <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
+        <a 
+    href="#dropdown"
+  class="NavItem button block button-nav-light ">
+    Action
+</a>
+
+    <a 
+    href="#dropdown"
+  class="NavItem button block button-nav-light ">
+    Action
+</a>
+
+    <a 
+    href="#dropdown"
+  class="NavItem button block button-nav-light ">
+    Action
+</a>
+
+
+  </div>
+
+</div>
+</section>
+
 <section id="modal" class="py3">
   <h1>Modal</h1>
 </section>
+
+<script>
+  var Basscss = Basscss || {};
+  Basscss.dropdowns = document.querySelectorAll('.Dropdown');
+  for (var i = 0; i < Basscss.dropdowns.length; i++) {
+    function init(dropdown) {
+      dropdown.button = dropdown.querySelector('.Dropdown-button');
+      dropdown.isOpen = false;
+      dropdown.body = dropdown.querySelector('.Dropdown-body');
+      dropdown.overlay = dropdown.querySelector('.Dropdown-overlay');
+      dropdown.button.onclick = dropdown.body.onclick = dropdown.overlay.onclick = function(e) {
+        dropdown.isOpen = !dropdown.isOpen;
+        if (dropdown.isOpen) {
+          dropdown.body.style.display = 'block';
+          dropdown.overlay.style.display = 'block';
+        } else {
+          dropdown.body.style.display = 'none';
+          dropdown.overlay.style.display = 'none';
+        }
+      }
+    }
+    init(Basscss.dropdowns[i]);
+  };
+</script>
 
 <footer class="py3">
   <p>

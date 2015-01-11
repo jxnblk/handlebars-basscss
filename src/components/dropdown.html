@@ -1,21 +1,16 @@
-<div class="Dropdown inline-block relative">
-  <button class="Dropdown-button"
-    ng-click="dropdown.toggle()"
-    ng-class="buttonClass || 'button-light-gray'">
-    {{ label }}
+<div class="Dropdown inline-block relative {{ this.classlist }}"
+  {{#each attr }}
+    {{ this.key }}="{{ this.value }}"
+  {{/each}}
+  >
+  <button class="Dropdown-button {{ this.buttonClass }}"
+    onclick="{{{ this.onclick }}}">
+    {{ this.label }}
     &#9662;
   </button>
-  <div ng-if="dropdown.isOpen"
-    ng-click="dropdown.isOpen = false"
-    class="fixed top-0 right-0 bottom-0 left-0"></div>
-  <bass-nav ng-if="dropdown.isOpen" class="Dropdown-body absolute z1">
-    <div ng-if="!items" ng-click="dropdown.isOpen = false" ng-transclude></div>
-    <bass-nav-item class="button block button-nav-light"
-      ng-if="items"
-      ng-repeat="item in items"
-      ng-click="dropdown.isOpen = false"
-      ng-transclude>
-        {{ item.name }}
-    </bass-nav-item>
-  </bass-nav>
+  <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
+  <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
+    {{{ this.body }}}
+  </div>
+
 </div>

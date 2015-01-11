@@ -5,4 +5,5 @@ module.exports = {
   test: require('./components/test'),
   navItem: require('./components/nav-item'),
   nav: require('./components/nav'),
+  dropdown: require('./components/dropdown'),
 };

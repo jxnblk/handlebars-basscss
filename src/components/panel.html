@@ -1,14 +1,14 @@
-<div class="overflow-hidden mb3 bg-white border rounded {{ this.classlist }}">
+<div class="Panel overflow-hidden mb3 bg-white border rounded {{ this.classlist }}">
   {{#if this.header }}
-    <div class="p2 border-bottom {{ this.headerClass }}">
+    <div class="Panel-header p2 border-bottom {{ this.headerClass }}">
       <h1 class="h3 m0">{{ this.header }}</h1>
     </div>
   {{/if}}
-  <div class="p2">
+  <div class="Panel-body p2">
     {{{ this.body }}}
   </div>
   {{#if this.footer }}
-    <div class="p2 bg-lighter-gray border-top">
+    <div class="Panel-footer p2 bg-lighter-gray border-top">
       <p class="m0 h5">{{ this.footer }}</p>
     </div>
   {{/if}}

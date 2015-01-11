@@ -13,6 +13,7 @@ module.exports = function(options) {
   if (options.hash) {
     data.attr = getAttr(options.hash);
     data.classlist = options.hash.class || null;
+    data.horizontal = options.hash.direction == 'horizontal' || false;
   }
 
   var template = Handlebars.compile(fs.readFileSync(__dirname + '/nav.html', 'utf8'));

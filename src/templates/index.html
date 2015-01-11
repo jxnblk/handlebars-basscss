@@ -108,8 +108,47 @@
   <h1>Breadcrumbs</h1>
 </section>
 
+<section id="dropdown" class="py3">
+  <h1 class="mb0">Dropdown</h1>
+  <p class="h5">(Requires Javascript)</p>
+  {{#dropdown "Actions" id="dropdown-1" class="mr1 mb2" }}
+    {{navItem "Action" href="#dropdown"}}
+    {{navItem "Edit" href="#dropdown"}}
+    {{navItem "Remove" href="#dropdown"}}
+  {{/dropdown}}
+  {{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
+    {{navItem "Action" href="#dropdown"}}
+    {{navItem "Action" href="#dropdown"}}
+    {{navItem "Action" href="#dropdown"}}
+  {{/dropdown}}
+</section>
+
 <section id="modal" class="py3">
   <h1>Modal</h1>
 </section>
+
+<script>
+  var Basscss = Basscss || {};
+  Basscss.dropdowns = document.querySelectorAll('.Dropdown');
+  for (var i = 0; i < Basscss.dropdowns.length; i++) {
+    function init(dropdown) {
+      dropdown.button = dropdown.querySelector('.Dropdown-button');
+      dropdown.isOpen = false;
+      dropdown.body = dropdown.querySelector('.Dropdown-body');
+      dropdown.overlay = dropdown.querySelector('.Dropdown-overlay');
+      dropdown.button.onclick = dropdown.body.onclick = dropdown.overlay.onclick = function(e) {
+        dropdown.isOpen = !dropdown.isOpen;
+        if (dropdown.isOpen) {
+          dropdown.body.style.display = 'block';
+          dropdown.overlay.style.display = 'block';
+        } else {
+          dropdown.body.style.display = 'none';
+          dropdown.overlay.style.display = 'none';
+        }
+      }
+    }
+    init(Basscss.dropdowns[i]);
+  };
+</script>
 
 {{>footer}}

@@ -12,7 +12,6 @@ module.exports = function(hash) {
       case 'href':
       case 'rel':
       case 'title':
-        console.log(key);
         arr.push({
           key: key,
           value: hash[key]
