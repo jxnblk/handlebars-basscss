@@ -1,6 +1,6 @@
-<div class="Card mb3 overflow-hidden rounded {{ cardClass }}"
+<div class="Card mb3 overflow-hidden rounded {{ cardClass }} {{ classlist }}"
   {{#each attr}}
-    {{ this.key }}="{{ this.value }}"
+    {{ key }}="{{ value }}"
   {{/each}}>
   {{#if img }}
     <img src="{{ img }}" />

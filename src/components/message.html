@@ -1,12 +1,12 @@
-<div class="Message table bold mb2 rounded {{ this.classlist }} {{ this.stateClass }}"
+<div class="Message table bold mb2 rounded {{ classlist }} {{ stateClass }}"
   {{#each attr}}
-    {{ this.key }}="{{ this.value }}"
+    {{ key }}="{{ value }}"
   {{/each}}>
   <div class="Message-body p2 table-cell full-width">
-    {{{ this.body }}}
+    {{{ body }}}
   </div>
-  {{#if this.dismiss }}
+  {{#if dismiss }}
     <a class="Message-dismiss h3 table-cell button py2 button-nav-dark"
-      onclick="{{{ this.dismiss }}}">&times;</a>
+      onclick="{{{ dismiss }}}">&times;</a>
   {{/if}}
 </div>

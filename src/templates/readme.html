@@ -1,0 +1,367 @@
+
+
+<h1 id="getting-started">Getting Started</h1>
+<p>Link to or include <a href="http://basscss.com">Basscss</a> in your template head.</p>
+<pre>&lt;link rel="stylesheet" href="/css/basscss.css"&gt;</pre><p>Install <code>handlebars-basscss</code> in your project.</p>
+<pre>npm install --save handlebars-basscss</pre><p>Register all Basscss helpers with Handlebars.</p>
+<pre><span class="hljs-keyword">var</span> Handlebars = <span class="hljs-built_in">require</span>(<span class="hljs-string">'handlebars'</span>);
+Handlebars.registerHelper(<span class="hljs-built_in">require</span>(<span class="hljs-string">'handlebars-basscss'</span>);</pre><p>Or, register helpers on an individual basis.</p>
+<pre><span class="hljs-keyword">var</span> basscss = <span class="hljs-built_in">require</span>(<span class="hljs-string">'handlebars-basscss'</span>);
+Handlebars.registerHelper({
+  panel: basscss.panel,
+  message: basscss.message
+});</pre><h1 id="global-options">Global Options</h1>
+<p>All helpers accept the following attributes: <code>id</code>, <code>class</code>, <code>style</code>, <code>href</code>, <code>rel</code>, <code>title</code>, and <code>alt</code>.</p>
+<h1 id="button">Button</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{button "Default" }}
+{{button "Gray" color="gray" }}
+{{button "Blue" color="blue" }}
+{{button "Red" color="red" }}
+{{button "Blue Outline" color="blue-outline" }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{button "Default" }}
+\{{button "Gray" color="gray" }}
+\{{button "Blue" color="blue" }}
+\{{button "Red" color="red" }}
+\{{button "Blue Outline" color="blue-outline" }}</pre>
+</div>
+<h1 id="nav-item">Nav Item</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{navItem "Burgers" href="#nav-item" }}
+{{navItem "Fries" href="#nav-item" }}
+{{navItem "Shake" href="#nav-item" }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{navItem "Burgers" href="#nav-item" }}
+\{{navItem "Fries" href="#nav-item" }}
+\{{navItem "Shake" href="#nav-item" }}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{navItem "Burgers" href="#nav-item" block="true" }}
+{{navItem "Fries" href="#nav-item" block="true" }}
+{{navItem "Shake" href="#nav-item" block="true" }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{navItem "Burgers" href="#nav-item" block="true" }}
+\{{navItem "Fries" href="#nav-item" block="true" }}
+\{{navItem "Shake" href="#nav-item" block="true" }}</pre>
+</div>
+<h1 id="badge">Badge</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{badge "Default" }}
+{{badge "Info" type="info" }}
+{{badge "Success" type="success" }}
+{{badge "Warning" type="warning" }}
+{{badge "Error" type="error" }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{badge "Default" }}
+\{{badge "Info" type="info" }}
+\{{badge "Success" type="success" }}
+\{{badge "Warning" type="warning" }}
+\{{badge "Error" type="error" }}</pre>
+</div>
+<h1 id="message">Message</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{message 'Default flash message' }}
+{{message 'Info flash message' type="info" }}
+{{message 'Success flash message' type="success" }}
+{{message 'Warning flash message' type="warning" }}
+{{message 'Error flash message with dismiss' type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{message 'Default flash message' }}
+\{{message 'Info flash message' type="info" }}
+\{{message 'Success flash message' type="success" }}
+\{{message 'Warning flash message' type="warning" }}
+\{{message 'Error flash message with dismiss' type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}</pre>
+</div>
+<h1 id="pagination">Pagination</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{pagination current="3" pages=pages previous="#previous" next="#next" }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{pagination current="3" pages=pages previous="#previous" next="#next" }}</pre>
+</div>
+<h1 id="media-object">Media Object</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#media img="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+  <h2 class="m0">Media Object</h2>
+  <p class="m0">With variable body content</p>
+{{/media }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#media img="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Media Object<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>With variable body content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+\{{/media }}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#media imgRight="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+  <h2 class="m0">Media Object</h2>
+  <p class="m0">With image to the right</p>
+{{/media }}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#media imgRight="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Media Object<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>With image to the right<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+\{{/media }}</pre>
+</div>
+<h1 id="flag-object">Flag Object</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#flag img="//basscss.com/docs/placeholder.svg" imgWidth="192" }}
+  <h2 class="m0">Flag Object</h2>
+  <p class="m0">Vertically centered media object</p>
+{{/flag}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#flag img="//basscss.com/docs/placeholder.svg" imgWidth="192" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Flag Object<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Vertically centered media object<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+\{{/flag}}</pre>
+</div>
+<h1 id="panel">Panel</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#panel header="Panel" }}
+  <h2>Panel with header but no footer</h2>
+{{/panel}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Panel with header but no footer<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+\{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#panel header="Panel" footer="Footer" }}
+  <h2>Panel with header and footer</h2>
+{{/panel}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" footer="Footer" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Panel with header and footer<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+\{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#panel header="Panel" type="info" }}
+  <h2>Info Panel</h2>
+{{/panel}}
+{{#panel header="Panel" type="success" }}
+  <h2>Success Panel</h2>
+{{/panel}}
+{{#panel header="Panel" type="warning" }}
+  <h2>Warning Panel</h2>
+{{/panel}}
+{{#panel header="Panel" type="error" }}
+  <h2>Error Panel</h2>
+{{/panel}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" type="info" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Info Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+\{{/panel}}
+\{{#panel header="Panel" type="success" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Success Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+\{{/panel}}
+\{{#panel header="Panel" type="warning" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Warning Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+\{{/panel}}
+\{{#panel header="Panel" type="error" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Error Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+\{{/panel}}</pre>
+</div>
+<h1 id="card">Card</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    <div class="col-6">
+  {{#card img="//basscss.com/docs/placeholder.svg" }}
+    <h1 class="m0">Default Card</h1>
+    <p class="m0">Bacon cheeseburger with onion rings</p>
+  {{/card}}
+</div>
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6"</span>&gt;</span>
+  \{{#card img="//basscss.com/docs/placeholder.svg" }}
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Default Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with onion rings<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  \{{/card}}
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    <div class="flex flex-wrap mxn2">
+  <div class="col-6 px2">
+    {{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Info Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 px2">
+    {{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Success Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 px2">
+    {{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Warning Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 px2">
+    {{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Error Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 px2">
+    {{#card }}
+      <h1 class="m0">Basic Card</h1>
+      <p>Sometimes cards don't need images</p>
+      <button class="button-blue">Pancake</button>
+      <button class="button-light-gray">Batter</button>
+    {{/card}}
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap mxn2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+    \{{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Info Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    \{{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+    \{{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Success Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    \{{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+    \{{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Warning Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    \{{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+    \{{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Error Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    \{{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+    \{{#card }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Basic Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sometimes cards don't need images<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-blue"</span>&gt;</span>Pancake<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-light-gray"</span>&gt;</span>Batter<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    \{{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h1 id="nav">Nav</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#nav id="nav" }}
+  {{navItem "Nav link" href="#nav-item" }}
+  {{navItem "Nav link" href="#nav-item" }}
+  {{navItem "Nav link" href="#nav-item" }}
+{{/nav}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#nav id="nav" }}
+  \{{navItem "Nav link" href="#nav-item" }}
+  \{{navItem "Nav link" href="#nav-item" }}
+  \{{navItem "Nav link" href="#nav-item" }}
+\{{/nav}}</pre>
+</div>
+<h1 id="navbar">Navbar</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#navbar }}
+  {{navItem "Home" href="#nav-item" }}
+  {{navItem "Burgers" href="#nav-item" }}
+  {{navItem "Fries" href="#nav-item" }}
+{{/navbar}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#navbar }}
+  \{{navItem "Home" href="#nav-item" }}
+  \{{navItem "Burgers" href="#nav-item" }}
+  \{{navItem "Fries" href="#nav-item" }}
+\{{/navbar}}</pre>
+</div>
+<h1 id="dropdown">Dropdown</h1>
+<p>(Requires Javascript)</p>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#dropdown "Actions" id="dropdown-1" class="mr1 mb2" }}
+  <a href="#" class="button block button-nav-light">Item</a>
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Edit" href="#dropdown" block="true" }}
+  {{navItem "Remove" href="#dropdown" block="true" }}
+{{/dropdown}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#dropdown "Actions" id="dropdown-1" class="mr1 mb2" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button block button-nav-light"</span>&gt;</span>Item<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  \{{navItem "Action" href="#dropdown" block="true" }}
+  \{{navItem "Edit" href="#dropdown" block="true" }}
+  \{{navItem "Remove" href="#dropdown" block="true" }}
+\{{/dropdown}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+{{/dropdown}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
+  \{{navItem "Action" href="#dropdown" block="true" }}
+  \{{navItem "Action" href="#dropdown" block="true" }}
+  \{{navItem "Action" href="#dropdown" block="true" }}
+\{{/dropdown}}</pre>
+</div>
+<h1 id="button-group">Button Group</h1>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#buttonGroup class="mr2"}}
+  {{button "Blue" color="blue" group="true" active="true" }}
+  {{button "Blue" color="blue" group="true" }}
+  {{button "Blue" color="blue" group="true" }}
+{{/buttonGroup}}
+{{#buttonGroup}}
+  {{button "Red" color="red" group="true" }}
+  {{button "Default" group="true" active="true" }}
+  {{button "Default" group="true" }}
+{{/buttonGroup}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#buttonGroup class="mr2"}}
+  \{{button "Blue" color="blue" group="true" active="true" }}
+  \{{button "Blue" color="blue" group="true" }}
+  \{{button "Blue" color="blue" group="true" }}
+\{{/buttonGroup}}
+\{{#buttonGroup}}
+  \{{button "Red" color="red" group="true" }}
+  \{{button "Default" group="true" active="true" }}
+  \{{button "Default" group="true" }}
+\{{/buttonGroup}}</pre>
+</div>
+<!--
+
+---
+
+### To do: 
+- [x] NavItem
+- [x] Nav
+- [x] Dropdown
+- [x] Button
+- [x] ButtonGroup
+- [x] Panel
+- [x] Message (alert)
+- [x] Card
+- [x] Pagination
+- [x] Badge
+- [x] Media Object
+- [x] Flag Object
+- [ ] Navbar
+- [ ] Tabs
+- [ ] Breadcrumbs
+- [ ] Modal
+
+- [ ] InputGroup
+-->
+

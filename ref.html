@@ -1,0 +1,223 @@
+
+<section id="panel" class="py3">
+<h1>Panel</h1>
+<div class="flex flex-wrap mxn2">
+  <div class="col-6 px2">
+    {{#panel header="Panel Header" }}
+      <h2>Panel with header but no footer</h2>
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel footer="Panel Footer" }}
+      Panel with footer but no header
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel header="Panel Header" footer="Panel Footer" }}
+      Panel with header and footer
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel header="Info Panel Header" type="info" }}
+      Panel for information
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel header="Success Panel Header" type="success" }}
+      Panel for success messages
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel header="Warning Panel Header" type="warning" }}
+      Panel for warning messages
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel header="Error Panel Header" type="error" }}
+      Panel for error messages
+    {{/panel}}
+  </div>
+  <div class="col-6 px2">
+    {{#panel }}
+      Basic panel with no header or footer
+    {{/panel}}
+  </div>
+</div>
+</section>
+
+<section id="card" class="py3">
+<h1>Card</h1>
+<div class="flex flex-wrap mxn2">
+  <div class="col-6 md-col-4 px2">
+    {{#card img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Default Card</h1>
+      <p class="m0">Pretty plain, but effective</p>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
+    {{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Info Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
+    {{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Success Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
+    {{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Warning Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
+    {{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
+      <h1 class="m0">Error Card</h1>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
+    {{#card }}
+      <h1 class="m0">Basic Card</h1>
+      <p>Sometimes cards don't need images</p>
+      <button class="button-blue">Pancake</button>
+      <button class="button-light-gray">Batter</button>
+    {{/card}}
+  </div>
+</div>
+</section>
+
+<section id="message" class="py3">
+{{message 'Default flash message'}}
+{{message 'Info flash message' type="info" }}
+{{message 'Success flash message' type="success" }}
+{{message 'Warning flash message' type="warning" }}
+{{message 'Error flash message with dismiss' type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}
+</section>
+
+<section id="nav-item" class="py3">
+<h1>Nav Item</h1>
+{{navItem "Nav link" href="#nav-item" }}
+{{navItem "Nav link" href="#derp" id="nav-link-test" }}
+{{navItem "Inline Nav link" inline="true" href="#derp" id="nav-link-test" }}
+{{navItem "Inline Nav link" inline="true" href="#derp" id="nav-link-test" }}
+</section>
+
+<section id="nav" class="py3">
+<h1>Nav</h1>
+{{#nav id="nav" class="mb3" }}
+  {{navItem "Nav link" href="#nav-item" }}
+  {{navItem "Nav link" href="#nav-item" }}
+  {{navItem "Nav link" href="#nav-item" }}
+{{/nav}}
+{{#nav id="nav" class="inline-block" }}
+  {{navItem "Nav link" href="#nav-item" inline="true" }}
+  {{navItem "Nav link" href="#nav-item" inline="true" }}
+  {{navItem "Nav link" href="#nav-item" inline="true" }}
+{{/nav}}
+</section>
+
+<section id="media-object" class="py3">
+<h1>Media Object</h1>
+<div class="flex flex-wrap mxn2">
+  <div class="col-6 px2">
+    {{#media img="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+      <h2 class="m0">Media Object</h2>
+      <p class="m0">With variable body content</p>
+    {{/media }}
+  </div>
+  <div class="col-6 px2">
+    {{#media imgRight="//basscss.com/docs/placeholder.svg" imgWidth="128" }}
+      <h2 class="m0">Media Object</h2>
+      <p class="m0">With image to the right</p>
+    {{/media }}
+  </div>
+  <div class="col-6 px2">
+    {{#media
+      img="//basscss.com/docs/placeholder.svg"
+      imgRight="//basscss.com/docs/placeholder.svg"
+      imgWidth="128" }}
+      <h2 class="m0">Media Object</h2>
+      <p class="m0">With two images</p>
+    {{/media }}
+  </div>
+</div>
+</section>
+
+<section id="flag-object" class="py3">
+<h1>Flag Object</h1>
+<div class="flex flex-wrap mxn2">
+  <div class="col-6 px2">
+    {{#flag img="//basscss.com/docs/placeholder.svg" imgWidth="192" }}
+      <h2 class="m0">Flag Object</h2>
+      <p class="m0">Vertically centered media object</p>
+    {{/flag}}
+  </div>
+  <div class="col-6 px2">
+    {{#flag img="//basscss.com/docs/placeholder.svg"
+      imgWidth="128"
+      imgHeight="128"}}
+      <h2 class="m0">Flag Object</h2>
+      <p class="m0">Vertically centered media object</p>
+    {{/flag}}
+  </div>
+</div>
+</section>
+
+<section id="badge" class="py3">
+<h1>Badge</h1>
+<div>
+  {{badge "Default" }}
+  {{badge "Info" type="info" }}
+  {{badge "Success" type="success" }}
+  {{badge "Warning" type="warning" }}
+  {{badge "Error" type="error" }}
+</div>
+</section>
+
+<section id="button" class="py3">
+<h1>Button</h1>
+{{button "Default" }}
+{{button "Gray" color="gray" }}
+{{button "Blue" color="blue" }}
+{{button "Red" color="red" }}
+{{button "Blue Outline" color="blue-outline" }}
+</section>
+
+<section id="button-group" class="py3">
+<h1>Button Group</h1>
+{{#buttonGroup class="mr2"}}
+  {{button "Blue" color="blue" group="true" active="true" }}
+  {{button "Blue" color="blue" group="true" }}
+  {{button "Blue" color="blue" group="true" }}
+{{/buttonGroup}}
+{{#buttonGroup}}
+  {{button "Red" color="red" group="true" active="true" }}
+  {{button "Default" group="true" }}
+  {{button "Default" group="true" }}
+{{/buttonGroup}}
+</section>
+
+<section id="pagination" class="py3">
+<h1>Pagination</h1>
+{{pagination current="3" pages=pages previous="#previous" next="#next" }}
+</section>
+
+
+<section id="dropdown" class="py3">
+<h1 class="mb0">Dropdown</h1>
+<p class="h5">(Requires Javascript)</p>
+
+{{#dropdown "Actions" id="dropdown-1" class="mr1 mb2" }}
+  <a href="#" class="button block button-nav-light">Item</a>
+  {{navItem "Action" href="#dropdown"}}
+  {{navItem "Edit" href="#dropdown"}}
+  {{navItem "Remove" href="#dropdown"}}
+{{/dropdown}}
+
+{{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
+  {{navItem "Action" href="#dropdown"}}
+  {{navItem "Action" href="#dropdown"}}
+  {{navItem "Action" href="#dropdown"}}
+{{/dropdown}}
+
+</section>
+

@@ -1,16 +1,16 @@
-<div class="Dropdown inline-block relative {{ this.classlist }}"
+<div class="Dropdown inline-block relative {{ classlist }}"
   {{#each attr }}
-    {{ this.key }}="{{ this.value }}"
+    {{ key }}="{{ value }}"
   {{/each}}
   >
-  <button class="Dropdown-button {{ this.buttonClass }}"
-    onclick="{{{ this.onclick }}}">
-    {{ this.label }}
+  <button class="Dropdown-button {{ buttonClass }}"
+    onclick="{{{ onclick }}}">
+    {{ label }}
     &#9662;
   </button>
   <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
   <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
-    {{{ this.body }}}
+    {{{ body }}}
   </div>
 
 </div>

@@ -3,7 +3,9 @@
  */
 
 
-/* Basscss */
-@import 'basscss';
+/* Basscss
+  @import 'basscss';
+ * */
 
+.sticky { position: sticky }
 

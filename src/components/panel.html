@@ -1,18 +1,18 @@
-<div class="Panel overflow-hidden mb3 bg-white border rounded {{ this.classlist }}"
+<div class="Panel overflow-hidden mb3 bg-white border rounded {{ classlist }}"
   {{#each attr}}
-    {{ this.key }}="{{ this.value }}"
+    {{ key }}="{{ value }}"
   {{/each}}>
-  {{#if this.header }}
-    <div class="Panel-header p2 {{ this.headerClass }}">
-      <h1 class="h3 m0">{{ this.header }}</h1>
+  {{#if header }}
+    <div class="Panel-header p2 {{ headerClass }}">
+      <h1 class="h3 m0">{{ header }}</h1>
     </div>
   {{/if}}
   <div class="Panel-body p2">
-    {{{ this.body }}}
+    {{{ body }}}
   </div>
-  {{#if this.footer }}
+  {{#if footer }}
     <div class="Panel-footer p2 bg-lighter-gray border-top">
-      <p class="m0 h5">{{ this.footer }}</p>
+      <p class="m0 h5">{{ footer }}</p>
     </div>
   {{/if}}
 </div>

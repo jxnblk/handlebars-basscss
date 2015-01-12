@@ -1,0 +1,14 @@
+<div class="Pagination inline-block overflow-hidden bg-white border rounded {{ classlist }}"
+  {{#each attr}}
+    {{ key }}="{{ value }}"
+  {{/each}}>
+  <a href="{{ previous }}" class="button left button-nav-light border-right">Previous</a>
+  {{#each pages}}
+    <a href="{{ href }}"
+      class="button left button-nav-light border-right
+      {{#if isActive }}is-active{{/if}}">
+        {{ @index }}
+    </a>
+  {{/each}}
+  <a href="{{ next }}" class="button left button-nav-light">Next</a>
+</div>

@@ -1,6 +1,6 @@
-<a {{#each this.attr }}
-    {{ this.key }}="{{ this.value }}"
-  {{/each}}
-  class="NavItem button {{#unless this.inline}}block{{/unless}} button-nav-light {{ this.classlist }}">
-    {{{ this.body }}}
+<a class="NavItem button {{#if block}}block{{/if}} button-nav-light {{ classlist }}"
+  {{#each attr }}
+    {{ key }}="{{ value }}"
+  {{/each}}>
+    {{{ body }}}
 </a>

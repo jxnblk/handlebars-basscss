@@ -2,22 +2,15 @@
 var fs = require('fs');
 var Handlebars = require('handlebars');
 var util = require('./util');
+var Helper = require('./util/Helper');
 
 module.exports = function(context, options) {
 
-  var options = options || {};
-  var data = util.defaults(options);
+  var navItem = new Helper('nav-item', options);
 
-  data.body = context;
+  navItem.data.body = context;
 
-  if (options.hash) {
-    data.inline = options.hash.inline || false;
-  }
-
-  var template = Handlebars.compile(fs.readFileSync(__dirname + '/nav-item.html', 'utf8'));
-  var html = template(data);
-
-  return new Handlebars.SafeString(html);
+  return navItem.safeString();
 
 };
 

@@ -7,10 +7,10 @@ module.exports = function(hash) {
   keys.forEach(function(key) {
     switch (key) {
       case 'id':
-      //case 'class':
       case 'style':
       case 'href':
       case 'rel':
+      case 'alt':
       case 'title':
         arr.push({
           key: key,

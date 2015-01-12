@@ -1,5 +1,6 @@
 
 module.exports = function(type) {
+  if (!type) return false;
   switch (type) {
     case 'info':
       return 'white bg-blue';

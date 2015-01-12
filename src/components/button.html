@@ -1,0 +1,10 @@
+<button class="Button button-{{ color }}
+  {{#if isActive }}is-active{{/if}}
+  {{#if isGroup }}left not-rounded{{/if}}
+  {{ classlist }}"
+  type="{{ buttonType }}"
+  {{#each attr}}
+    {{ key }}="{{ value }}"
+  {{/each}}>
+  {{{ body }}}
+</button>
