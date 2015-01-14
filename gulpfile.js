@@ -56,16 +56,14 @@ gulp.task('handlebars', function() {
   $.root().children().first('h1').remove();
   $.root().children().first('p').remove();
 
-  //console.log($.html());
   fs.writeFileSync('./src/templates/readme.html', $.html());
 
   Handlebars.registerPartial('content', $.html());
 
-  Handlebars.registerHelper(require('./src/helpers'));
+  Handlebars.registerHelper(require('./index'));
   Handlebars.registerPartial(require('./src/partials'));
   var data = {
     title: title,
-    //content: content,
     navItems: [
       { name: 'Getting Started', href: '#getting-started' },
       { name: 'Button', href: '#button' },
@@ -100,13 +98,6 @@ gulp.task('handlebars', function() {
 gulp.task('serve', function() {
   gulp.src('.')
     .pipe(webserver({}));
-});
-
-gulp.task('timer', function() {
-  var moment = require('moment');
-  var timer = setInterval(function() {
-    console.log('[' + moment().format('HH:mm:ss') + ']');
-  }, 1000);
 });
 
 gulp.task('default', ['handlebars', 'css', 'js', 'serve'], function() {

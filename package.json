@@ -31,6 +31,7 @@
   "scripts": {
     "start": "gulp"
   },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jxnblk/handlebars-basscss.git"
