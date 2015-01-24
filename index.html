@@ -3,15 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Handlebars Basscss</title>
-  <link rel="stylesheet" href="//basscss.com/docs/css/base.min.css">
-  <!--
-  <link rel="stylesheet" href="/css/base.min.css">
-  -->
+  <link rel="stylesheet" href="//d2v52k3cl9vedd.cloudfront.net/bassdock/0.0.1/bassdock.min.css">
 </head>
 <body class="container px2">
 
-<header class="py4">
-  <h1 class="h1 h1-responsive caps m0">Handlebars Basscss</h1>
+<header class="py3 mb4 border-bottom">
+  <h1 class="h1 h1-responsive m0">Handlebars Basscss</h1>
   <p class="m0">Helpers for creating UI elements in Handlebars with Basscss</p>
 </header>
 
@@ -549,7 +546,7 @@ Handlebars.registerHelper({
 <h1 id="navbar">Navbar</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-<div class="Navbar py1 bg-light-gray "
+<div class="Navbar py1 bg-lighter-gray "
 >
     <a class="NavItem button  button-nav-light "
     href="#nav-item"
@@ -585,7 +582,7 @@ Handlebars.registerHelper({
 <div class="Dropdown inline-block relative mr1 mb2"
     id="dropdown-1"
   >
-  <button class="Dropdown-button "
+  <button class="Dropdown-button button-light-gray"
     onclick="">
     Actions
     &#9662;
@@ -613,7 +610,6 @@ Handlebars.registerHelper({
 
 
   </div>
-
 </div>
   </div>
   <pre class="MarkedExample-code p2 bg-darken-1">{{#dropdown "Actions" id="dropdown-1" class="mr1 mb2" }}
@@ -655,10 +651,45 @@ Handlebars.registerHelper({
 
 
   </div>
+</div>
+<div class="Dropdown inline-block relative mr1 mb2"
+    id="dropdown-3"
+  >
+  <button class="Dropdown-button button-nav-light"
+    onclick="">
+    More Actions
+    &#9662;
+  </button>
+  <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
+  <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
+      <a class="NavItem button block button-nav-light "
+    href="#dropdown"
+  >
+    Action
+</a>
 
+  <a class="NavItem button block button-nav-light "
+    href="#dropdown"
+  >
+    Action
+</a>
+
+  <a class="NavItem button block button-nav-light "
+    href="#dropdown"
+  >
+    Action
+</a>
+
+
+  </div>
 </div>
   </div>
   <pre class="MarkedExample-code p2 bg-darken-1">{{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+{{/dropdown}}
+{{#dropdown "More Actions" id="dropdown-3" buttonClass="button-nav-light" class="mr1 mb2" }}
   {{navItem "Action" href="#dropdown" block="true" }}
   {{navItem "Action" href="#dropdown" block="true" }}
   {{navItem "Action" href="#dropdown" block="true" }}
@@ -866,7 +897,7 @@ Handlebars.registerHelper({
   </p>
 </footer>
 
-<script src="/js/app.min.js"></script>
+<script src="js/app.min.js"></script>
 
 </body>
 </html>

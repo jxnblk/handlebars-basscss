@@ -15,14 +15,6 @@ var marked = require('marked');
 var markedExample = require('marked-example');
 var cheerio = require('cheerio');
 
-gulp.task('css', function() {
-  gulp.src('./src/css/base.css')
-    .pipe(basswork())
-    .pipe(gulp.dest('./css'))
-    .pipe(minifyCss())
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./css'));
-});
 
 gulp.task('js', function() {
   var browserified = transform(function(filename) {
@@ -100,7 +92,7 @@ gulp.task('serve', function() {
     .pipe(webserver({}));
 });
 
-gulp.task('default', ['handlebars', 'css', 'js', 'serve'], function() {
-  gulp.watch(['./src/**/*', './README.md'], ['handlebars', 'css', 'js']);
+gulp.task('default', ['handlebars', 'js', 'serve'], function() {
+  gulp.watch(['./src/**/*', './README.md'], ['handlebars', 'js']);
 });
 

@@ -308,8 +308,18 @@ Handlebars.registerHelper({
   {{navItem "Action" href="#dropdown" block="true" }}
   {{navItem "Action" href="#dropdown" block="true" }}
 {{/dropdown}}
+{{#dropdown "More Actions" id="dropdown-3" buttonClass="button-nav-light" class="mr1 mb2" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+{{/dropdown}}
   </div>
   <pre class="MarkedExample-code p2 bg-darken-1">\{{#dropdown "More Actions" id="dropdown-2" buttonClass="button-blue" class="mr1 mb2" }}
+  \{{navItem "Action" href="#dropdown" block="true" }}
+  \{{navItem "Action" href="#dropdown" block="true" }}
+  \{{navItem "Action" href="#dropdown" block="true" }}
+\{{/dropdown}}
+\{{#dropdown "More Actions" id="dropdown-3" buttonClass="button-nav-light" class="mr1 mb2" }}
   \{{navItem "Action" href="#dropdown" block="true" }}
   \{{navItem "Action" href="#dropdown" block="true" }}
   \{{navItem "Action" href="#dropdown" block="true" }}

@@ -8,7 +8,7 @@ module.exports = function(label, options) {
   var dropdown = new Helper('dropdown', options);
   dropdown.data.label = label;
 
-  if (!options.hash && !options.hash.buttonClass) {
+  if (!options.hash || !options.hash.buttonClass) {
     dropdown.data.buttonClass = 'button-light-gray';
   }
 

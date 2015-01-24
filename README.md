@@ -222,6 +222,11 @@ All helpers accept the following attributes: `id`, `class`, `style`, `href`, `re
   {{navItem "Action" href="#dropdown" block="true" }}
   {{navItem "Action" href="#dropdown" block="true" }}
 {{/dropdown}}
+{{#dropdown "More Actions" id="dropdown-3" buttonClass="button-nav-light" class="mr1 mb2" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+  {{navItem "Action" href="#dropdown" block="true" }}
+{{/dropdown}}
 ```
 
 # Button Group

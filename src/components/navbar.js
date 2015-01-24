@@ -9,9 +9,9 @@ module.exports = function(options) {
   var navbar = new Helper('navbar', options);
 
   if (options.hash) {
-    navbar.data.navbarClass = getState(options.hash.type) || 'bg-light-gray';
+    navbar.data.navbarClass = getState(options.hash.type) || 'bg-lighter-gray';
   } else {
-    navbar.data.navbarClass = 'bg-light-gray';
+    navbar.data.navbarClass = 'bg-lighter-gray';
   }
 
   navbar.data.inline = true;
