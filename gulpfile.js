@@ -54,32 +54,31 @@ gulp.task('handlebars', function() {
 
   Handlebars.registerHelper(require('./index'));
   Handlebars.registerPartial(require('./src/partials'));
-  var data = {
-    title: title,
-    navItems: [
-      { name: 'Getting Started', href: '#getting-started' },
-      { name: 'Button', href: '#button' },
-      { name: 'Nav Item', href: '#nav-item' },
-      { name: 'Badge', href: '#badge' },
-      { name: 'Message', href: '#message' },
-      { name: 'Pagination', href: '#pagination' },
-      { name: 'Media Object', href: '#media-object' },
-      { name: 'Flag Object', href: '#flag-object' },
-      { name: 'Panel', href: '#panel' },
-      { name: 'Card', href: '#card' },
-      { name: 'Nav', href: '#nav' },
-      { name: 'Navbar', href: '#navbar' },
-      { name: 'Dropdown', href: '#dropdown' },
-      { name: 'Button Group', href: '#button-group' },
-      //{ name: 'Breadcrumbs', href: '#breadcrumbs' },
-      //{ name: 'Modal', href: '#modal' },
-    ],
-    pages: [
-      { href: '?page=1' },
-      { href: '?page=2' },
-      { href: '?page=3' },
-    ]
-  };
+  var data = require('./package.json');
+  data.title = title;
+  data.navItems = [
+    { name: 'Getting Started', href: '#getting-started' },
+    { name: 'Button', href: '#button' },
+    { name: 'Nav Item', href: '#nav-item' },
+    { name: 'Badge', href: '#badge' },
+    { name: 'Message', href: '#message' },
+    { name: 'Pagination', href: '#pagination' },
+    { name: 'Media Object', href: '#media-object' },
+    { name: 'Flag Object', href: '#flag-object' },
+    { name: 'Panel', href: '#panel' },
+    { name: 'Card', href: '#card' },
+    { name: 'Nav', href: '#nav' },
+    { name: 'Navbar', href: '#navbar' },
+    { name: 'Dropdown', href: '#dropdown' },
+    { name: 'Button Group', href: '#button-group' },
+    //{ name: 'Breadcrumbs', href: '#breadcrumbs' },
+    //{ name: 'Modal', href: '#modal' },
+  ];
+  data.pages = [
+    { href: '?page=1' },
+    { href: '?page=2' },
+    { href: '?page=3' },
+  ];
 
   var tpl = Handlebars.compile(fs.readFileSync('./src/templates/index.html', 'utf8'));
   var html = tpl(data);

@@ -78,13 +78,14 @@ Handlebars.registerHelper({
 \{{message 'Warning flash message' type="warning" }}
 \{{message 'Error flash message with dismiss' type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}</pre>
 </div>
-<h1 id="pagination">Pagination</h1>
-<div class="MarkedExample bg-darken-1 rounded">
-  <div class="MarkedExample-rendered p2">
-    {{pagination current="3" pages=pages previous="#previous" next="#next" }}
-  </div>
-  <pre class="MarkedExample-code p2 bg-darken-1">\{{pagination current="3" pages=pages previous="#previous" next="#next" }}</pre>
-</div>
+<!--
+# Pagination
+
+```html
+{{pagination current="3" pages=pages previous="#previous" next="#next" }}
+```
+-->
+
 <h1 id="media-object">Media Object</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
@@ -149,73 +150,79 @@ Handlebars.registerHelper({
     {{#panel header="Panel" type="info" }}
   <h2>Info Panel</h2>
 {{/panel}}
-{{#panel header="Panel" type="success" }}
-  <h2>Success Panel</h2>
-{{/panel}}
-{{#panel header="Panel" type="warning" }}
-  <h2>Warning Panel</h2>
-{{/panel}}
-{{#panel header="Panel" type="error" }}
-  <h2>Error Panel</h2>
-{{/panel}}
   </div>
   <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" type="info" }}
   <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Info Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-\{{/panel}}
-\{{#panel header="Panel" type="success" }}
+\{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#panel header="Panel" type="success" }}
+  <h2>Success Panel</h2>
+{{/panel}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" type="success" }}
   <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Success Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-\{{/panel}}
-\{{#panel header="Panel" type="warning" }}
+\{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#panel header="Panel" type="warning" }}
+  <h2>Warning Panel</h2>
+{{/panel}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" type="warning" }}
   <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Warning Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-\{{/panel}}
-\{{#panel header="Panel" type="error" }}
+\{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#panel header="Panel" type="error" }}
+  <h2>Error Panel</h2>
+{{/panel}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#panel header="Panel" type="error" }}
   <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Error Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
 \{{/panel}}</pre>
 </div>
 <h1 id="card">Card</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-    <div class="col-6">
-  {{#card img="//basscss.com/docs/placeholder.svg" }}
-    <h1 class="m0">Default Card</h1>
-    <p class="m0">Bacon cheeseburger with onion rings</p>
-  {{/card}}
-</div>
-  </div>
-  <pre class="MarkedExample-code p2 bg-darken-1"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6"</span>&gt;</span>
-  \{{#card img="//basscss.com/docs/placeholder.svg" }}
-    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Default Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with onion rings<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  \{{/card}}
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-</div>
-<div class="MarkedExample bg-darken-1 rounded">
-  <div class="MarkedExample-rendered p2">
     <div class="flex flex-wrap mxn2">
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
+    {{#card img="//basscss.com/docs/placeholder.svg" class="inline-block" }}
+      <h1 class="m0">Default Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
     {{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Info Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Success Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Warning Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Error Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card }}
-      <h1 class="m0">Basic Card</h1>
-      <p>Sometimes cards don't need images</p>
+      <h1 class="m0">Imageless Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
       <button class="button-blue">Pancake</button>
       <button class="button-light-gray">Batter</button>
     {{/card}}
@@ -223,30 +230,40 @@ Handlebars.registerHelper({
 </div>
   </div>
   <pre class="MarkedExample-code p2 bg-darken-1"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap mxn2"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
+    \{{#card img="//basscss.com/docs/placeholder.svg" class="inline-block" }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Default Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    \{{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     \{{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Info Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     \{{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     \{{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Success Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     \{{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     \{{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Warning Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     \{{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     \{{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Error Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     \{{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     \{{#card }}
-      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Basic Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sometimes cards don't need images<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Imageless Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-blue"</span>&gt;</span>Pancake<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-light-gray"</span>&gt;</span>Batter<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     \{{/card}}
@@ -281,6 +298,20 @@ Handlebars.registerHelper({
   \{{navItem "Home" href="#nav-item" }}
   \{{navItem "Burgers" href="#nav-item" }}
   \{{navItem "Fries" href="#nav-item" }}
+\{{/navbar}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+    {{#navbar type="dark" }}
+  {{navItem "Home" href="#nav-item" inverse="true" tall="true" }}
+  {{navItem "Burgers" href="#nav-item" inverse="true" tall="true" }}
+  {{navItem "Fries" href="#nav-item" inverse="true" tall="true" }}
+{{/navbar}}
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">\{{#navbar type="dark" }}
+  \{{navItem "Home" href="#nav-item" inverse="true" tall="true" }}
+  \{{navItem "Burgers" href="#nav-item" inverse="true" tall="true" }}
+  \{{navItem "Fries" href="#nav-item" inverse="true" tall="true" }}
 \{{/navbar}}</pre>
 </div>
 <h1 id="dropdown">Dropdown</h1>

@@ -9,9 +9,9 @@ module.exports = function(options) {
   var card = new Helper('card', options);
 
   if (options.hash) {
-    card.data.cardClass = getStateClasses(options.hash.type) || 'bg-white border';
+    card.data.cardClass = getStateClasses(options.hash.type) || 'bg-white';
   } else {
-    card.data.cardClass = 'bg-white border';
+    card.data.cardClass = 'bg-white';
   }
 
   return card.safeString();

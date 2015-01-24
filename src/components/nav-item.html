@@ -1,4 +1,8 @@
-<a class="NavItem button {{#if block}}block{{/if}} button-nav-light {{ classlist }}"
+<a class="NavItem button
+  {{#if block}}block{{/if}}
+  {{#if inverse }}button-nav-dark{{else}}button-nav-light{{/if}}
+  {{#if tall }}py2{{/if}}
+  {{ classlist }}"
   {{#each attr }}
     {{ key }}="{{ value }}"
   {{/each}}>

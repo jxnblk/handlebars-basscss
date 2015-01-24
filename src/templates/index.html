@@ -1,20 +1,29 @@
 {{>head}}
 
-<header class="py3 mb4 border-bottom">
-  <h1 class="h1 h1-responsive m0">{{ title }}</h1>
-  <p class="m0">Helpers for creating UI elements in Handlebars with Basscss</p>
+<header class="container px2 mt3 mb3">
+  <div class="flex flex-wrap flex-center border-bottom py3">
+    <h1 class="xflex-auto h1 h1-responsive caps m0">
+      {{ title }}
+    </h1>
+    {{badge "beta"}}
+    <div class="flex-auto"></div>
+    <a href="{{ homepage }}" class="button button-nav-light">Github</a>
+  </div>
+  <p class="h3 mt2">Helpers for creating UI elements in Handlebars with Basscss</p>
 </header>
 
-<div class="clearfix mxn2">
-  <div class="sm-col sm-col-9 px2">
-    {{~>content~}}
-  </div>
-  <div class="sm-col sm-col-3 px2 py3 sticky top-0">
-      {{#nav class="" }}
-        {{#each ../navItems}}
-          {{navItem name href=href block="true" }}
-        {{/each}}
-      {{/nav}}
+<div class="container px2">
+  <div class="clearfix mxn2">
+    <div class="sm-col sm-col-9 px2">
+      {{~>content~}}
+    </div>
+    <div class="sm-show sm-col sm-col-3 px2 py3 sticky top-0">
+        {{#nav class="" }}
+          {{#each ../navItems}}
+            {{navItem name href=href block="true" }}
+          {{/each}}
+        {{/nav}}
+    </div>
   </div>
 </div>
 

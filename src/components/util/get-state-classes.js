@@ -14,6 +14,9 @@ module.exports = function(type) {
     case 'error':
       return 'white bg-red';
       break;
+    case 'dark':
+      return 'white bg-dark-gray';
+      break;
     default:
       return false;
       break;

@@ -81,11 +81,13 @@ All helpers accept the following attributes: `id`, `class`, `style`, `href`, `re
 {{message 'Error flash message with dismiss' type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}
 ```
 
+<!--
 # Pagination
 
 ```html
 {{pagination current="3" pages=pages previous="#previous" next="#next" }}
 ```
+-->
 
 # Media Object
 
@@ -130,12 +132,21 @@ All helpers accept the following attributes: `id`, `class`, `style`, `href`, `re
 {{#panel header="Panel" type="info" }}
   <h2>Info Panel</h2>
 {{/panel}}
+```
+
+```html
 {{#panel header="Panel" type="success" }}
   <h2>Success Panel</h2>
 {{/panel}}
+```
+
+```html
 {{#panel header="Panel" type="warning" }}
   <h2>Warning Panel</h2>
 {{/panel}}
+```
+
+```html
 {{#panel header="Panel" type="error" }}
   <h2>Error Panel</h2>
 {{/panel}}
@@ -144,39 +155,41 @@ All helpers accept the following attributes: `id`, `class`, `style`, `href`, `re
 # Card
 
 ```html
-<div class="col-6">
-  {{#card img="//basscss.com/docs/placeholder.svg" }}
-    <h1 class="m0">Default Card</h1>
-    <p class="m0">Bacon cheeseburger with onion rings</p>
-  {{/card}}
-</div>
-```
-```html
 <div class="flex flex-wrap mxn2">
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
+    {{#card img="//basscss.com/docs/placeholder.svg" class="inline-block" }}
+      <h1 class="m0">Default Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
+    {{/card}}
+  </div>
+  <div class="col-6 md-col-4 px2">
     {{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Info Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Success Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Warning Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
       <h1 class="m0">Error Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
     {{/card}}
   </div>
-  <div class="col-6 px2">
+  <div class="col-6 md-col-4 px2">
     {{#card }}
-      <h1 class="m0">Basic Card</h1>
-      <p>Sometimes cards don't need images</p>
+      <h1 class="m0">Imageless Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
       <button class="button-blue">Pancake</button>
       <button class="button-light-gray">Batter</button>
     {{/card}}
@@ -201,6 +214,14 @@ All helpers accept the following attributes: `id`, `class`, `style`, `href`, `re
   {{navItem "Home" href="#nav-item" }}
   {{navItem "Burgers" href="#nav-item" }}
   {{navItem "Fries" href="#nav-item" }}
+{{/navbar}}
+```
+
+```html
+{{#navbar type="dark" }}
+  {{navItem "Home" href="#nav-item" inverse="true" tall="true" }}
+  {{navItem "Burgers" href="#nav-item" inverse="true" tall="true" }}
+  {{navItem "Fries" href="#nav-item" inverse="true" tall="true" }}
 {{/navbar}}
 ```
 

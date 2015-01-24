@@ -5,15 +5,27 @@
   <title>Handlebars Basscss</title>
   <link rel="stylesheet" href="//d2v52k3cl9vedd.cloudfront.net/bassdock/0.0.1/bassdock.min.css">
 </head>
-<body class="container px2">
+<body>
 
-<header class="py3 mb4 border-bottom">
-  <h1 class="h1 h1-responsive m0">Handlebars Basscss</h1>
-  <p class="m0">Helpers for creating UI elements in Handlebars with Basscss</p>
+<header class="container px2 mt3 mb3">
+  <div class="flex flex-wrap flex-center border-bottom py3">
+    <h1 class="xflex-auto h1 h1-responsive caps m0">
+      Handlebars Basscss
+    </h1>
+    <span class="Badge bold inline-block button-small rounded bg-light-gray "
+>
+  beta
+</span>
+
+    <div class="flex-auto"></div>
+    <a href="https://github.com/jxnblk/handlebars-basscss" class="button button-nav-light">Github</a>
+  </div>
+  <p class="h3 mt2">Helpers for creating UI elements in Handlebars with Basscss</p>
 </header>
 
-<div class="clearfix mxn2">
-  <div class="sm-col sm-col-9 px2">
+<div class="container px2">
+  <div class="clearfix mxn2">
+    <div class="sm-col sm-col-9 px2">
 
 <h1 id="getting-started">Getting Started</h1>
 <p>Link to or include <a href="http://basscss.com">Basscss</a> in your template head.</p>
@@ -85,19 +97,31 @@ Handlebars.registerHelper({
 <h1 id="nav-item">Nav Item</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-    <a class="NavItem button  button-nav-light "
+    <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Burgers
 </a>
 
-<a class="NavItem button  button-nav-light "
+<a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Fries
 </a>
 
-<a class="NavItem button  button-nav-light "
+<a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Shake
@@ -110,19 +134,31 @@ Handlebars.registerHelper({
 </div>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-    <a class="NavItem button block button-nav-light "
+    <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Burgers
 </a>
 
-<a class="NavItem button block button-nav-light "
+<a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Fries
 </a>
 
-<a class="NavItem button block button-nav-light "
+<a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Shake
@@ -215,10 +251,11 @@ Handlebars.registerHelper({
 {{message 'Warning flash message' type="warning" }}
 {{message 'Error flash message with dismiss' type="error" dismiss="console.log('bye bye');this.parentNode.remove()" }}</pre>
 </div>
-<h1 id="pagination">Pagination</h1>
-<div class="MarkedExample bg-darken-1 rounded">
-  <div class="MarkedExample-rendered p2">
-    <div class="Pagination inline-block overflow-hidden bg-white border rounded "
+<!--
+# Pagination
+
+```html
+<div class="Pagination inline-block overflow-hidden bg-white border rounded "
 >
   <a href="#previous" class="button left button-nav-light border-right">Previous</a>
     <a href="?page=1"
@@ -239,9 +276,9 @@ Handlebars.registerHelper({
   <a href="#next" class="button left button-nav-light">Next</a>
 </div>
 
-  </div>
-  <pre class="MarkedExample-code p2 bg-darken-1">{{pagination current="3" pages=pages previous="#previous" next="#next" }}</pre>
-</div>
+```
+-->
+
 <h1 id="media-object">Media Object</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
@@ -356,6 +393,13 @@ Handlebars.registerHelper({
 
   </div>
 </div>
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">{{#panel header="Panel" type="info" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Info Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
 <div class="Panel overflow-hidden mb3 bg-white border rounded "
 >
     <div class="Panel-header p2 white bg-green">
@@ -366,6 +410,13 @@ Handlebars.registerHelper({
 
   </div>
 </div>
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">{{#panel header="Panel" type="success" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Success Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
 <div class="Panel overflow-hidden mb3 bg-white border rounded "
 >
     <div class="Panel-header p2 bg-yellow">
@@ -376,6 +427,13 @@ Handlebars.registerHelper({
 
   </div>
 </div>
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">{{#panel header="Panel" type="warning" }}
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Warning Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+{{/panel}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
 <div class="Panel overflow-hidden mb3 bg-white border rounded "
 >
     <div class="Panel-header p2 white bg-red">
@@ -387,90 +445,75 @@ Handlebars.registerHelper({
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code p2 bg-darken-1">{{#panel header="Panel" type="info" }}
-  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Info Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-{{/panel}}
-{{#panel header="Panel" type="success" }}
-  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Success Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-{{/panel}}
-{{#panel header="Panel" type="warning" }}
-  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Warning Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-{{/panel}}
-{{#panel header="Panel" type="error" }}
+  <pre class="MarkedExample-code p2 bg-darken-1">{{#panel header="Panel" type="error" }}
   <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Error Panel<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
 {{/panel}}</pre>
 </div>
 <h1 id="card">Card</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-    <div class="col-6">
-<div class="Card mb3 overflow-hidden rounded bg-white border "
->
-    <img src="//basscss.com/docs/placeholder.svg" />
-  <div class="p2">
-        <h1 class="m0">Default Card</h1>
-    <p class="m0">Bacon cheeseburger with onion rings</p>
-
-  </div>
-</div>
-</div>
-  </div>
-  <pre class="MarkedExample-code p2 bg-darken-1"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6"</span>&gt;</span>
-  {{#card img="//basscss.com/docs/placeholder.svg" }}
-    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Default Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with onion rings<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  {{/card}}
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-</div>
-<div class="MarkedExample bg-darken-1 rounded">
-  <div class="MarkedExample-rendered p2">
     <div class="flex flex-wrap mxn2">
-  <div class="col-6 px2">
-<div class="Card mb3 overflow-hidden rounded white bg-blue "
+  <div class="col-6 md-col-4 px2">
+<div class="Card mb3 overflow-hidden rounded inline-block border"
 >
-    <img src="//basscss.com/docs/placeholder.svg" />
-  <div class="p2">
+    <img src="//basscss.com/docs/placeholder.svg" class="block" />
+  <div class="p2 bg-white">
+          <h1 class="m0">Default Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
+
+  </div>
+</div>
+  </div>
+  <div class="col-6 md-col-4 px2">
+<div class="Card mb3 overflow-hidden rounded  "
+>
+    <img src="//basscss.com/docs/placeholder.svg" class="block" />
+  <div class="p2 white bg-blue">
           <h1 class="m0">Info Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
 
   </div>
 </div>
   </div>
-  <div class="col-6 px2">
-<div class="Card mb3 overflow-hidden rounded white bg-green "
+  <div class="col-6 md-col-4 px2">
+<div class="Card mb3 overflow-hidden rounded  "
 >
-    <img src="//basscss.com/docs/placeholder.svg" />
-  <div class="p2">
+    <img src="//basscss.com/docs/placeholder.svg" class="block" />
+  <div class="p2 white bg-green">
           <h1 class="m0">Success Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
 
   </div>
 </div>
   </div>
-  <div class="col-6 px2">
-<div class="Card mb3 overflow-hidden rounded bg-yellow "
+  <div class="col-6 md-col-4 px2">
+<div class="Card mb3 overflow-hidden rounded  "
 >
-    <img src="//basscss.com/docs/placeholder.svg" />
-  <div class="p2">
+    <img src="//basscss.com/docs/placeholder.svg" class="block" />
+  <div class="p2 bg-yellow">
           <h1 class="m0">Warning Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
 
   </div>
 </div>
   </div>
-  <div class="col-6 px2">
-<div class="Card mb3 overflow-hidden rounded white bg-red "
+  <div class="col-6 md-col-4 px2">
+<div class="Card mb3 overflow-hidden rounded  "
 >
-    <img src="//basscss.com/docs/placeholder.svg" />
-  <div class="p2">
+    <img src="//basscss.com/docs/placeholder.svg" class="block" />
+  <div class="p2 white bg-red">
           <h1 class="m0">Error Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
 
   </div>
 </div>
   </div>
-  <div class="col-6 px2">
-<div class="Card mb3 overflow-hidden rounded bg-white border "
+  <div class="col-6 md-col-4 px2">
+<div class="Card mb3 overflow-hidden rounded  border"
 >
-  <div class="p2">
-          <h1 class="m0">Basic Card</h1>
-      <p>Sometimes cards don't need images</p>
+  <div class="p2 bg-white">
+          <h1 class="m0">Imageless Card</h1>
+      <p class="m0">Bacon cheeseburger with fries</p>
       <button class="button-blue">Pancake</button>
       <button class="button-light-gray">Batter</button>
 
@@ -480,30 +523,40 @@ Handlebars.registerHelper({
 </div>
   </div>
   <pre class="MarkedExample-code p2 bg-darken-1"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap mxn2"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
+    {{#card img="//basscss.com/docs/placeholder.svg" class="inline-block" }}
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Default Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    {{/card}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     {{#card type="info" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Info Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     {{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     {{#card type="success" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Success Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     {{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     {{#card type="warning" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Warning Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     {{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     {{#card type="error" img="//basscss.com/docs/placeholder.svg" }}
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Error Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     {{/card}}
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 px2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 md-col-4 px2"</span>&gt;</span>
     {{#card }}
-      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Basic Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sometimes cards don't need images<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Imageless Card<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>Bacon cheeseburger with fries<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-blue"</span>&gt;</span>Pancake<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-light-gray"</span>&gt;</span>Batter<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
     {{/card}}
@@ -516,19 +569,31 @@ Handlebars.registerHelper({
 <div class="Nav bg-white border rounded "
     id="nav"
   >
-      <a class="NavItem button  button-nav-light "
+      <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Nav link
 </a>
 
-  <a class="NavItem button  button-nav-light "
+  <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Nav link
 </a>
 
-  <a class="NavItem button  button-nav-light "
+  <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Nav link
@@ -546,21 +611,33 @@ Handlebars.registerHelper({
 <h1 id="navbar">Navbar</h1>
 <div class="MarkedExample bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-<div class="Navbar py1 bg-lighter-gray "
+<div class="Navbar bg-light-gray "
 >
-    <a class="NavItem button  button-nav-light "
+    <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Home
 </a>
 
-  <a class="NavItem button  button-nav-light "
+  <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Burgers
 </a>
 
-  <a class="NavItem button  button-nav-light "
+  <a class="NavItem button
+  
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Fries
@@ -573,6 +650,49 @@ Handlebars.registerHelper({
   {{navItem "Home" href="#nav-item" }}
   {{navItem "Burgers" href="#nav-item" }}
   {{navItem "Fries" href="#nav-item" }}
+{{/navbar}}</pre>
+</div>
+<div class="MarkedExample bg-darken-1 rounded">
+  <div class="MarkedExample-rendered p2">
+<div class="Navbar white bg-dark-gray "
+>
+    <a class="NavItem button
+  
+  button-nav-dark
+  py2
+  "
+    href="#nav-item"
+  >
+    Home
+</a>
+
+  <a class="NavItem button
+  
+  button-nav-dark
+  py2
+  "
+    href="#nav-item"
+  >
+    Burgers
+</a>
+
+  <a class="NavItem button
+  
+  button-nav-dark
+  py2
+  "
+    href="#nav-item"
+  >
+    Fries
+</a>
+
+
+</div>
+  </div>
+  <pre class="MarkedExample-code p2 bg-darken-1">{{#navbar type="dark" }}
+  {{navItem "Home" href="#nav-item" inverse="true" tall="true" }}
+  {{navItem "Burgers" href="#nav-item" inverse="true" tall="true" }}
+  {{navItem "Fries" href="#nav-item" inverse="true" tall="true" }}
 {{/navbar}}</pre>
 </div>
 <h1 id="dropdown">Dropdown</h1>
@@ -590,19 +710,31 @@ Handlebars.registerHelper({
   <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
   <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
       <a href="#" class="button block button-nav-light">Item</a>
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
 </a>
 
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Edit
 </a>
 
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Remove
@@ -631,19 +763,31 @@ Handlebars.registerHelper({
   </button>
   <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
   <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
-      <a class="NavItem button block button-nav-light "
+      <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
 </a>
 
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
 </a>
 
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
@@ -662,19 +806,31 @@ Handlebars.registerHelper({
   </button>
   <div class="Dropdown-overlay fixed z1 top-0 right-0 bottom-0 left-0" style="display:none"></div>
   <div class="Dropdown-body absolute z1 mt1 bg-white rounded border" style="min-width:10rem;display:none">
-      <a class="NavItem button block button-nav-light "
+      <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
 </a>
 
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
 </a>
 
-  <a class="NavItem button block button-nav-light "
+  <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Action
@@ -798,88 +954,144 @@ Handlebars.registerHelper({
 -->
 
 </div>
-  <div class="sm-col sm-col-3 px2 py3 sticky top-0">
+    <div class="sm-show sm-col sm-col-3 px2 py3 sticky top-0">
 <div class="Nav bg-white border rounded "
 >
-              <a class="NavItem button block button-nav-light "
+                <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#getting-started"
   >
     Getting Started
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#button"
   >
     Button
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#nav-item"
   >
     Nav Item
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#badge"
   >
     Badge
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#message"
   >
     Message
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#pagination"
   >
     Pagination
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#media-object"
   >
     Media Object
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#flag-object"
   >
     Flag Object
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#panel"
   >
     Panel
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#card"
   >
     Card
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#nav"
   >
     Nav
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#navbar"
   >
     Navbar
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#dropdown"
   >
     Dropdown
 </a>
 
-          <a class="NavItem button block button-nav-light "
+            <a class="NavItem button
+  block
+  button-nav-light
+  
+  "
     href="#button-group"
   >
     Button Group
@@ -887,14 +1099,18 @@ Handlebars.registerHelper({
 
 
 </div>
+    </div>
   </div>
 </div>
 
-<footer class="py3">
-  <p>
-    Made with love by
-    <a href="//jxnblk.com">Jxnblk</a>
-  </p>
+<footer class="container px2 mt4">
+  <div class="border-top">
+    <div class="flex flex-wrap flex-center py3 mxn2">
+      <a href="https://github.com/jxnblk/handlebars-basscss" class="button button-nav-light">Github</a>
+      <div class="flex-auto"></div>
+      <p class="h5 m0 px2">Made by <a href="//jxnblk.com">Jxnblk</a></p>
+    </div>
+  </div>
 </footer>
 
 <script src="js/app.min.js"></script>
